@@ -20,7 +20,7 @@ Configured for 2 monitors:
 | Terminal     | kitty   |
 | File manager | thunar  |
 | App launcher | worf    |
-| Power menu   | nwg-bar |
+| Power menu   | worf    |
 
 ### Plugins
 
@@ -64,6 +64,4 @@ Configured for 2 monitors:
 
 ## TODO
 
-- `worf` can be used as a power menu
-- `layerrule` for `worf` is quite buggy, redo
 -

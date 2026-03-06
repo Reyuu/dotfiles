@@ -1,0 +1,39 @@
+#!/bin/bash
+
+option_logout="img:/home/rey/.config/worf/powermenu/system-lock-screen.svg:text:Logout"
+option_reboot="img:/home/rey/.config/worf/powermenu/system-reboot.svg:text:Reboot"
+option_suspend="img:/home/rey/.config/worf/powermenu/system-suspend.svg:Hibernate"
+option_shutdown="img:/home/rey/.config/worf/powermenu/system-shutdown.svg:text:Shutdown"
+theme="$HOME/.config/worf"
+result=`echo -e "$option_reboot\n$option_suspend\n$option_shutdown\n$option_logout" | \
+  .cargo/bin/worf --show dmenu -i true -p "Exit" \
+  --style $theme/style.css \
+  --conf $theme/powermenu/config.toml \
+  --sort-order default \
+  --image-size 32 \
+  --orientation vertical \
+  --hide-search true \
+  --content-vcenter true \
+  --blurred-background-fullscreen true \
+  --blurred-background true `
+
+case "$result" in
+  "$option_logout")
+    hyprctl dispatch exit
+    ;;
+
+  "$option_reboot")
+    reboot
+    ;;
+
+  "$option_suspend")
+    hyprlock & systemctl suspend-then-hibernate
+    ;;
+
+  "$option_shutdown")
+    shutdown now
+    ;;
+
+  *)
+    exit 1
+esac
