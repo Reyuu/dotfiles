@@ -4,7 +4,13 @@
 
 ## Worf
 
+### App launcher
+
 ![Worf screenshot](https://github.com/user-attachments/assets/92f9e2b2-7022-4b8b-b02f-fd7105dfa51e)
+
+### Power menu
+
+![Worf screenshot](https://github.com/user-attachments/assets/9ab9c8e5-3f4e-498c-8e6a-e4e1af5a328a)
 
 ## Hyprland
 
