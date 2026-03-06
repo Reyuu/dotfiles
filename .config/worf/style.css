@@ -1,0 +1,130 @@
+/*
+Worf MacOS Glass-like theme
+bit buggy due to how it's rendered, as it's rendered as a layer shell
+*/
+
+:root {
+    /* Theme Variables */
+  --window-bg: rgba(30, 30, 30, 0.75);
+  --window-border: rgba(255, 255, 255, 0.15);
+  --window-radius: 15px;
+  --input-bg: rgba(255, 255, 255, 0.1);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-radius: 15px;
+  --entry-radius: 15px;
+  --entry-selected-bg: #ffffff10;
+  --entry-selected-border: #ffffff34;
+  --label-bg: rgba(255, 255, 255, 0.2);
+  --label-radius: 15px;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-hint: rgba(255, 255, 255, 0.6);
+  --outline-width: 3px;
+}
+
+* {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: var(--window-radius);
+}
+
+body {
+  background-color: transparent;
+}
+
+#background {
+  background-color: transparent;
+}
+
+#window {
+  background-color: var(--window-bg);
+  border-radius: var(--window-radius);
+  border: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid var(--window-border);
+  border-right: 1px solid var(--window-border);
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  margin: 2rem auto;
+}
+
+#outer-box {
+  /* Container */
+}
+
+#input {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--input-border);
+  border-right: 1px solid var(--input-border);
+  padding: 10px 12px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#scroll {
+  /* Scroll area */
+  background-color: transparent;
+  display: none;
+}
+
+#inner-box {
+  /* List container */
+}
+
+#entry {
+  padding: 10px 10px;
+  border-radius: var(--entry-radius);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.1s;
+}
+
+#entry:selected {
+  background-color: var(--entry-selected-bg);
+  color: var(--text-primary);
+  border-bottom: var(--entry-selected-border) solid 3px;
+  border-right: var(--entry-selected-border) solid 3px;
+}
+
+#text {
+  margin-left: 10px;
+}
+
+#img {
+  width: 48px;
+  height: 48px;
+}
+
+#row {
+  display: flex;
+  align-items: center;
+}
+
+#custom-key-label-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#custom-key-label-box {
+  background-color: var(--label-bg);
+  border-radius: var(--label-radius);
+  padding: 2px 6px;
+  margin-left: 8px;
+}
+
+#custom-key-hint-text {
+  color: var(--text-hint);
+  font-size: 14px;
+}
+
+#custom-key-hint-box {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}

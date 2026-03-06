@@ -1,0 +1,9 @@
+allow_images = true
+term = "kitty -e"
+insensitive = true
+key_detection_type = "Code"
+blurred_background = true
+image_size = 48
+width = "35%"
+height = "50%"
+hide_scroll = true
