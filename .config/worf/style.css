@@ -13,7 +13,7 @@ bit buggy due to how it's rendered, as it's rendered as a layer shell
   --input-radius: 15px;
   --entry-radius: 15px;
   --entry-selected-bg: #ffffff10;
-  --entry-selected-border: #ffffff34;
+  --entry-selected-border: #ffffff0c;
   --label-bg: rgba(255, 255, 255, 0.2);
   --label-radius: 15px;
   --text-primary: #ffffff;
