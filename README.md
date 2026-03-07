@@ -1,6 +1,6 @@
 ## Waybar
 
-![Waybar screenshot](https://github.com/user-attachments/assets/ccdf5616-79e7-4429-8654-5e11d0910130)
+![Waybar screenshot](https://github.com/user-attachments/assets/c24c0aa3-1083-4e9c-96df-36680b463249)
 
 ## Worf
 
