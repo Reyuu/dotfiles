@@ -1,44 +1,26 @@
-@define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
-@define-color background rgba(0, 0, 0, 0.25);
-
-* {
-    font-family: SF Pro;
+window#waybar {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+    color: #ffffff;
+    font-family: "SF Pro Display", "AppleGothic", sans-serif;
+    font-size: 14px;
     font-weight: 500;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
 }
 
-#waybar {
-    color: @foreground;
-    background-color: @background;
+#custom-logo-symbol, #custom-notification {
+    background: transparent;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
 }
 
-#workspaces button {
-    color: @foreground;
-    padding-left: 0.4em;
-    padding-right: 0.35em;
+#custom-notification, #hyprland-workspaces, #network, #battery, #bluetooth, #custom-minhypr, #wireplumber, #hyprland-language, #idle_inhibitor, #clock, #tray {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#workspaces button.empty {
-    color: @foreground-inactive;
-}
-
-#memory,
-#custom-platform-profile {
-    padding-left: 1em
-}
-
-#wireplumber,
-#battery,
-#idle_inhibitor,
-#language,
-#network,
-#bluetooth,
-#tray {
-    padding-right: 1em 
-}
-#custom-notification {
-  font-family: "NotoSansMono Nerd Font";
+#window {
+    font-weight: bold;
+    padding-left: 10px;
 }
