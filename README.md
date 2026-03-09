@@ -67,6 +67,7 @@ Configured for 2 monitors:
 | `ALT + M`                  | Minimize window                  |
 | `ALT + SHIFT + M`          | Maximize all windows             |
 | `MOD + .`                  | Emoji input                      |
+| `MOD + D`                  | Force non-transparent window     |
 
 ## TODO
 
