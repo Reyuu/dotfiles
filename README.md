@@ -32,6 +32,7 @@ Configured for 2 monitors:
 
 - `dynamic-cursors`
 - `hyprexpo`
+- `hypr-darkwindow`
 
 ### Shortcuts
 
@@ -71,4 +72,4 @@ Configured for 2 monitors:
 
 ## TODO
 
--
+- some fonts have aliasing when viewed on lighter background (side effect of chromakey)
