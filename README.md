@@ -1,3 +1,77 @@
+# Rey's dotfiles
+
+## Current setup
+![fastfetch](https://github.com/user-attachments/assets/cf7e602a-d203-4927-8eef-6d9c16062f38)
+
+Switched to Artix Linux to avoid systemd. That means this is no longer `uwsm` managed setup, `$launch_app` variable is still available in Hyprland config, if you'd rather do that.
+
+As for other hardware:
+- Zaopin Z2mini
+- Numphy Air 75 (v1)
+
+> [!NOTE]
+> To fix Numphy's F-keys / FN keys simply use:
+> ```
+> echo 2 | sudo tee -a /sys/module/hid_apple/parameters/fnmode
+> ```
+> For a pernament fix:
+> ```
+> echo "options hid_apple fnmode=2" | sudo tee -a /etc/modprobe.d/hid_apple.conf
+> sudo update-initramfs -u
+> ```
+
+## General
+### ZSH
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+```
+Add to your .zshrc:
+```zsh
+source /path/to/antidote/antidote.zsh
+antidote load
+```
+
+### Fonts and XCursor
+```zsh
+sudo pacman -S apple-fonts nerd-fonts 
+paru -S apple_cursor
+```
+
+### Hyprcursor
+```zsh
+git clone https://github.com/6ooker/apple_hyprcursor
+cd apple_hyprcursor
+chmod +x ./build.sh
+./build.sh
+tar -xvf macOS-hypr.tar.xz
+mv macOS-hypr ~/.local/share/icons/
+```
+
+### GTK theme
+```zsh
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme
+cd WhiteSur-gtk-theme
+chmod +x ./install.sh
+./install.sh -HD -t all
+```
+
+### QT/KDE theme
+```zsh
+git clone https://github.com/vinceliuice/WhiteSur-kde
+cd WhiteSur-kde
+chmod +x ./install.sh
+./install.sh
+```
+
+### Icons
+```zsh
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme
+cd WhiteSur-icon-theme
+chmod +x ./install.sh
+./install.sh
+```
+
 ## Waybar
 
 ![Waybar screenshot](https://github.com/user-attachments/assets/c24c0aa3-1083-4e9c-96df-36680b463249)
@@ -14,8 +88,6 @@
 
 ## Hyprland
 
-UWSM managed setup.
-
 Configured for 2 monitors:
 
 - `DP-1` 1440p@180
@@ -28,7 +100,7 @@ Configured for 2 monitors:
 | App launcher | worf    |
 | Power menu   | worf    |
 
-### Plugins
+### Hyprland plugins
 
 - `dynamic-cursors`
 - `hyprexpo`
