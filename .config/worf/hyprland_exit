@@ -23,7 +23,7 @@ case "$result" in
     ;;
 
   "$option_reboot")
-    reboot
+    loginctl reboot
     ;;
 
   "$option_suspend")
@@ -31,7 +31,7 @@ case "$result" in
     ;;
 
   "$option_shutdown")
-    shutdown now
+    loginctl poweroff
     ;;
 
   *)
