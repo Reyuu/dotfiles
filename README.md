@@ -96,7 +96,10 @@ Configured for 2 monitors:
 | What         | Program |
 | ------------ | ------- |
 | Terminal     | kitty   |
+| IDE          | code    |
 | File manager | thunar  |
+| Image viewer | nomacs  |
+| Archiver     | ark     |
 | App launcher | worf    |
 | Power menu   | worf    |
 
