@@ -1,9 +1,7 @@
 # Rey's dotfiles
 
 ## Current setup
-![fastfetch](https://github.com/user-attachments/assets/cf7e602a-d203-4927-8eef-6d9c16062f38)
-
-Switched to Artix Linux to avoid systemd. That means this is no longer `uwsm` managed setup, `$launch_app` variable is still available in Hyprland config, if you'd rather do that.
+![hyfetch](https://github.com/user-attachments/assets/6b4f5a49-3565-4c2b-9c5b-4206faf86d52)
 
 As for other hardware:
 - Zaopin Z2mini
@@ -38,16 +36,6 @@ sudo pacman -S apple-fonts nerd-fonts
 paru -S apple_cursor
 ```
 
-### Hyprcursor
-```zsh
-git clone https://github.com/6ooker/apple_hyprcursor
-cd apple_hyprcursor
-chmod +x ./build.sh
-./build.sh
-tar -xvf macOS-hypr.tar.xz
-mv macOS-hypr ~/.local/share/icons/
-```
-
 ### GTK theme
 ```zsh
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme
@@ -74,40 +62,35 @@ chmod +x ./install.sh
 
 ## Waybar
 
-![Waybar screenshot](https://github.com/user-attachments/assets/c24c0aa3-1083-4e9c-96df-36680b463249)
+![Waybar screenshot](https://github.com/user-attachments/assets/43c82f80-1911-40e1-b6e5-efa95988687d)
 
-## Worf
+## bemenu
 
 ### App launcher
 
-![Worf screenshot](https://github.com/user-attachments/assets/92f9e2b2-7022-4b8b-b02f-fd7105dfa51e)
+![Worf screenshot](https://github.com/user-attachments/assets/cfe6ec8b-c0ae-42c2-ad1f-3ad61e482d91)
 
 ### Power menu
 
-![Worf screenshot](https://github.com/user-attachments/assets/9ab9c8e5-3f4e-498c-8e6a-e4e1af5a328a)
+![Worf screenshot](https://github.com/user-attachments/assets/14db8e51-dc33-40bf-8cca-3a8e5ec8e595)
 
-## Hyprland
+## swayfx
 
 Configured for 2 monitors:
 
-- `DP-1` 1440p@180
-- `DP-2` 1080p@60, to the left of `DP-1`, restricted to the workspace 10
+- `DP-2` 1440p@180
+- `DP-3` 1080p@60, to the left of `DP-1`, restricted to a single workspace
+- `HDMI-A-1` 1080p@60, for the occasional tablet usage
 
 | What         | Program |
 | ------------ | ------- |
-| Terminal     | kitty   |
-| IDE          | code    |
+| Terminal     | wezterm   |
+| IDE          | nvim    |
 | File manager | thunar  |
-| Image viewer | nomacs  |
+| Image viewer | imageviewer  |
 | Archiver     | ark     |
-| App launcher | worf    |
-| Power menu   | worf    |
-
-### Hyprland plugins
-
-- `dynamic-cursors`
-- `hyprexpo`
-- `hypr-darkwindow`
+| App launcher | bemenu    |
+| Power menu   | bemenu    |
 
 ### Shortcuts
 
@@ -140,11 +123,6 @@ Configured for 2 monitors:
 | `ALT + TAB`                | Switch window                    |
 | `ALT + SHIFT + TAB`        | Switch to previous window        |
 | `MULTIMEDIA KEYS`          | Working as expected              |
-| `ALT + M`                  | Minimize window                  |
-| `ALT + SHIFT + M`          | Maximize all windows             |
-| `MOD + .`                  | Emoji input                      |
-| `MOD + D`                  | Force non-transparent window     |
 
 ## TODO
-
-- some fonts have aliasing when viewed on lighter background (side effect of chromakey)
+- update keybindings in the table
