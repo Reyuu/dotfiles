@@ -7,11 +7,17 @@
     "position": "top",
     "height": 32,
     "spacing": 5,
-    "output": ["DP-1"],
+    "output": ["DP-2"],
 
-    "modules-left": ["niri/window"],
-    "modules-center": [],
-    "modules-right": ["wireplumber", "battery", "niri/language", "tray", "network", "custom/weather", "clock", "custom/notification"],
+    "modules-left": ["dwl/window"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["wireplumber", "battery", "dwl/language", "tray", "network", "custom/weather", "clock", "custom/notification"],
+
+	"custom/music": {
+		"format": "{}",
+		"return-type": "json",
+		"exec": "waybar-module-music --format \"[ %icon% ] %artist% - %title%\" --play-icon \"\" --pause-icon \"\""
+	},
 
     "custom/logo-symbol": {
         "type": "custom/logo",
@@ -40,7 +46,7 @@
         "format": "\uf4bc    {used:0.1f}G/{total:0.1f}G"
     },
 
-    "niri/window": {
+    "dwl/window": {
         "format": "{title}",
         "icon": true,
         "icon-size": 14
@@ -67,7 +73,7 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
-    "niri/language": {
+    "dwl/language": {
         "format": "{short}"
     },
 

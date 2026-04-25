@@ -1,0 +1,13 @@
+--require('mini.cmdline').setup()
+require("mini.ai").setup()
+require("mini.align").setup()
+require("mini.comment").setup()
+require("mini.move").setup()
+require("mini.splitjoin").setup()
+require("mini.surround").setup()
+--require("mini.animate").setup()
+--require("mini.cursorword").setup()
+require("mini.hipatterns").setup()
+require("mini.indentscope").setup()
+require("mini.notify").setup()
+
